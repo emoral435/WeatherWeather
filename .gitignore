@@ -1,0 +1,2 @@
+# ignore node_modules, so that the people who want to fork this only have to download the packages they need to build the project themselves
+/node_modules
