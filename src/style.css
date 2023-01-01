@@ -15,3 +15,150 @@ body {
     -o-background-size: cover;
     background-size: cover;
   }
+
+  .form {
+    width: 95%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #0a293b;
+}
+
+.form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transition: all 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.content-location {
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+    transition: all 0.3s ease;
+    color: #5fa8d3;
+}
+
+.form input:focus + .label-location .content-location, 
+.form input:valid + .label-location .content-location {
+    transform: translateY(-150%);
+    font-size: .8rem;
+    color: #5fa8d3;
+}
+
+.form input:focus +.label-location::after, 
+.form input:valid + .label-location::after {
+    transform: translateX(0%);
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.spinner-centering {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.spinner {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow: hidden;
+    position: relative;
+    animation: text-color 2s ease-in-out infinite;
+}
+
+.spinner-sector {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid transparent;
+    mix-blend-mode: overlay;
+    animation: rotate var(--duration) var(--timing) infinite;
+    pointer-events: none;
+}
+
+.spinner-sector-red {
+    border-top-color: lightcoral;
+    --duration: 1.5s;
+    --timing: ease-in-out;
+}
+
+.spinner-sector-blue {
+    border-left-color: lightblue;
+    --duration: 2s;
+    --timing: ease-in;
+}
+
+.spinner-sector-green {
+    border-right-color: lightgreen;
+    --duration: 2.5s;
+    --timing: ease;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes text-color {
+    0%, 100% {
+        color: rgba(0,0,0,1)
+    }
+    25%, 75% {
+        color: rgba(0,0,0,.5)
+    }
+    50% {
+        color: rgba(0,0,0,.1)
+    }
+}
