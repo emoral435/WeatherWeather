@@ -2,6 +2,7 @@
 
 This is a website that allows you to see the weather - in celsius or farenheit for the imperial system lovers - at anywhere in the world.
 It's the Weather! Weather!.
+There is no mobile styling, as this was done to showcase my usage of API's. My To Do List has better mobile styling!
 Try it out! Thanks!
 
 A website totally generated with JavaScript, TailwindCSS, Webpack, Date-FNS, OpenWeatherMap, and GIPHY API!

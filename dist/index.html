@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>Initial Config</title>
 </head>
 <body>
-    <h1 class="bg-red-900 text-black">Hello World</h1>
-    <script src="bundle.js"></script>
+    <main class="h-[100vh] w-[100vw] flex flex-col font-['Nunito']" id="main">
+        <div class="basis-[60%] w-full flex">
+            <div class="flex w-full h-full justify-between">
+                <div class="basis-[25%] w-full h-full flex items-center justify-center min-w-min">
+                    <div class="w-4/6 flex flex-col text-white bg-[#0a121d] rounded-xl p-4 min-h-min"> <!-- this is the area section that gets injected with info of the area!-->
+                        <div id="area" class="flex justify-center items-center text-xl">Area</div>
+                        <div id="main" class="flex justify-center items-center text-3xl border-b-2 border-white">Main</div>
+                        <div id="currentTemp" class="flex justify-center items-center text-3xl my-2">Current Temp</div>
+                        <div id="description" class="flex justify-center items-center text-xl">Description</div>
+                        <div class="flex justify-around my-2">
+                            <div id="high">H:</div>
+                            <div id="low">L:</div>
+                        </div>
+                        <div id="wind" class="flex justify-center items-center text-3xl">Wind Speed</div>
+                        <div class="grid grid-cols-2 grid-rows-2 gap-2">
+                            <div class="col-span-1 flex justify-center items-center text-lg border-b-2 border-white">Sunset</div>
+                            <div class="col-span-1 flex justify-center items-center text-lg border-b-2 border-white">Sunrise</div>
+                            <div id="sunset" class="col-span-1 flex justify-center items-center text-lg">Time1</div>
+                            <div id="sunrise" class="col-span-1 flex justify-center items-center text-lg">Time2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basis-[25%]"></div>
+            </div>
+        </div>
+        <div class="basis-[40%]"></div>
+    </main>
+    <script src="bundle.js"></script>  
 </body>
 </html>
+
+<!-- <button class="flex text-white"><img src="./images/double-temp.png" class="h-[1.5rem] w-[2rem]">Display ℉<img src="./images/double-temp.png" class="h-[1.5rem] w-[2rem]"></button></div> -->
