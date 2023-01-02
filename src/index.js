@@ -6,4 +6,3 @@ console.log({test: 'This is running wepack and tailwind, but this time bundled c
 
 // try to load where the are first located at 
 initialLoad()
-geolocator()

@@ -1,9 +1,10 @@
 // write a function that loads the dom elements with the proper attributes
 import loading from "./loading"
+import { elmnts } from "./makeWDisplay"
 
 export default function initialLoad() {
-    loading.toggle()
-    console.log('do not forget to finish the initialization process for loading where the user is at original location')
-    loading.toggle()
+    // loading.toggle()
+    elmnts()
+    // loading.toggle()
     return 1
 }
