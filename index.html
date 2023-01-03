@@ -16,7 +16,10 @@
 
                 <!-- this is where the input box is so that the user can query for the location that they want -->
                 <div class="basis-[20%] w-full h-full flex items-center justify-center min-w-min">
-                    <div class="w-2/6 flex text-white bg-black rounded-xl p-4 min-h-max justify-center items-center"> <!-- this is the area section that gets injected with info of the area!-->
+                    <div class="w-3/6 flex text-white bg-black rounded-xl p-4 min-h-max justify-center items-center"> <!-- this is the area section that gets injected with info of the area!-->
+                        <div class="pl-4 pr-8 flex flex-col">
+                            <button class="p-4 bg-[#0a293b] rounded-md text-[#5ba2cc] hover:scale-110 transition-all" id="check">°F</button>
+                        </div>
                         <div class="form">
                             <input type="text" name="location" id="location" autocomplete="off" tabindex="1" required>
                             <label for="location" class="label-location">
@@ -25,6 +28,11 @@
                         </div>
                         <img src="./images/magnifying-glass-tilted-left-svgrepo-com.svg" class="w-10 ml-4 h-10 hover:scale-110 transition-all">
                     </div>
+                </div>
+
+                <!-- this is where the error toggle is located at! -->
+                <div class="flex justify-center">
+                    <div id="div-error"><span id="error" class=""></span></div>
                 </div>
 
                 <!-- this is where the users query information gets injected into the DOM -->
