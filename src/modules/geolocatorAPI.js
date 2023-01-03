@@ -1,18 +1,18 @@
+import check from "./checkSystem";
+import updateDom from "./updateDom";
+
 export default function geolocator() {
     let optionSelect;
     const success = (position) => {
-        optionSelect = {
-            option: 1,
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        }
+        let lat = position.coords.latitude
+        let lng = position.coords.longitude
+        let url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lng + '&appid=ff0a8ad948af191118bd4640bc45e3fe&' + check()
+        updateDom(url)
     }
 
     const error = (err) => {
-        optionSelect = {
-            option: 0
-        }
+        let url = 'https://api.openweathermap.org/data/2.5/weather?q=Mexico&APPID=ff0a8ad948af191118bd4640bc45e3fe&' + check()
+        updateDom(url)
     }
     navigator.geolocation.getCurrentPosition(success, error)
-    return optionSelect
 }

@@ -1,10 +1,12 @@
 // write a function that loads the dom elements with the proper attributes
 import loading from "./loading"
 import { elmnts } from "./makeWDisplay"
+import geolocator from "./geolocatorAPI"
 
-export default function initialLoad() {
+async function initialLoad() {
     // loading.toggle()
     elmnts()
-    // loading.toggle()
-    return 1
+    geolocator()
 }
+
+export default initialLoad

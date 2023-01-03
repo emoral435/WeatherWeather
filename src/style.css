@@ -167,3 +167,24 @@ body {
         color: rgba(255, 255, 255, 0.1)
     }
 }
+
+#div-error.active {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: min-content;
+    padding: 1rem 2rem;
+    background-color: black;
+    border-radius: 8px;
+}
+
+#error.active {
+    display: flex;
+    min-width: min-content;
+    padding: 1rem 2rem 1rem 2rem;
+    height: 3rem;
+    background-color: rgb(129, 18, 18);
+    border-radius: 8px;
+    color: rgb(209, 23, 23);
+}
