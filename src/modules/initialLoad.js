@@ -4,7 +4,7 @@ import { elmnts } from "./makeWDisplay"
 import geolocator from "./geolocatorAPI"
 
 async function initialLoad() {
-    // loading.toggle()
+    loading.toggle()
     elmnts()
     geolocator()
 }

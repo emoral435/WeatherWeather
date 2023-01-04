@@ -10,12 +10,12 @@
     <title>Initial Config</title>
 </head>
 <body>
-    <main class="h-[100vh] w-[100vw] flex flex-col font-['Nunito']" id="main">
+    <main class="h-[100vh] w-[100vw] flex flex-col font-['Nunito']">
         <div class="basis-[100%] w-full flex">
-            <div class="flex flex-col w-full h-full" id="appendor">
+            <div class="flex flex-col w-full h-full gap-12 justify-around items-center" id="appendor">
 
                 <!-- this is where the input box is so that the user can query for the location that they want -->
-                <div class="basis-[20%] w-full h-full flex items-center justify-center min-w-min">
+                <div class="basis-[10%] w-full h-full flex items-center justify-center min-w-min">
                     <div class="w-3/6 flex text-white bg-black rounded-xl p-4 min-h-max justify-center items-center"> <!-- this is the area section that gets injected with info of the area!-->
                         <div class="pl-4 pr-8 flex flex-col">
                             <button class="p-4 bg-[#0a293b] rounded-md text-[#5ba2cc] hover:scale-110 transition-all" id="check">°F</button>
@@ -26,7 +26,7 @@
                                 <span class="content-location">Enter Your Location Here...</span>
                             </label>
                         </div>
-                        <img src="./images/magnifying-glass-tilted-left-svgrepo-com.svg" class="w-10 ml-4 h-10 hover:scale-110 transition-all">
+                        <img src="./images/magnifying-glass-tilted-left-svgrepo-com.svg" id="query" class="w-10 ml-4 h-10 hover:scale-110 transition-all">
                     </div>
                 </div>
 
@@ -34,36 +34,6 @@
                 <div class="flex justify-center">
                     <div id="div-error"><span id="error" class=""></span></div>
                 </div>
-
-                <!-- this is where the users query information gets injected into the DOM -->
-
-                <!-- <div class="basis-[50%] w-full h-full flex items-center justify-center min-w-min"> 
-                    <div class="w-4/6 flex flex-col text-white bg-[#0a121d] rounded-xl p-4 min-h-min"> 
-                        <div id="area" class="flex justify-center items-center text-xl mb-4">Area</div>
-                        <div id="main" class="flex justify-center items-center text-3xl border-b-2 border-white">Main</div>
-                        <div class="flex justify-around items-center my-4">
-                            <img class="w-20 h-20">
-                            <div id="currentTemp" class="flex justify-center items-center text-3xl mt-8 mb-4">Current Temp</div>
-                            <div id="description" class="flex justify-center items-center text-xl">Description</div>
-                        </div>
-                        <div class="flex justify-around my-2">
-                            <div id="high">H:</div>
-                            <div id="low">L:</div>
-                        </div>
-                        <div class="flex justify-around pl-20 my-8">
-                            <div id="wind" class="text-5xl">Wind</div>
-                            <div class="text-3xl"> | </div>
-                            <div id="humidity" class="text-5xl">Humidity</div>
-                        </div>
-                        <div class="grid grid-cols-2 grid-rows-2 gap-2">
-                            <div class="col-span-1 flex justify-center items-center text-lg border-b-2 border-white">Sunset</div>
-                            <div class="col-span-1 flex justify-center items-center text-lg border-b-2 border-white">Sunrise</div>
-                            <div id="sunset" class="col-span-1 flex justify-center items-center text-lg">Time1</div>
-                            <div id="sunrise" class="col-span-1 flex justify-center items-center text-lg">Time2</div>
-                        </div>
-                    </div>
-                </div> -->
-
 
             </div>
         </div>
